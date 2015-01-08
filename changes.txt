@@ -1,0 +1,136 @@
+Note: The "Qxxxxxx" are Microsoft Support IDs. You can look up the documents on http://www.microsoft.com
+
+This is the last UOLog 1.x version.
+The next release will be completely rewritten, featuring a plugin engine and other things.
+
+Release 1.2:
+
+17 April 2004:
+    -Added a new filter type: HexLex
+     It is a regular expression engine which I coded for UOLog.
+     You can enter filter strings like "BF ?? ?? ?? 06|07" to only log BF SubType 06 or 07.
+     The syntax is easy, seperate each byte with a space. '|' is or. '?' is a wildcard for any nibble.
+     ?? can be used as wildcard on any byte.
+     Example:
+     "02 ?2|?3" would only log walking requests for direction 02 or 03, running and walking.
+     Note that invalid strings (spaces before or after | etc) might crash, I didn't want to debug it yet.
+     Have fun with this new feature.
+
+Release 1.1:
+
+27 August 2003:
+   -Added Logging -> Raw, handy if you want to paste the output directly into a script.
+   -Fixed some minor typos in the tutorial.
+
+
+Release 1.0:
+
+03 August 2003:
+   -Copying from the logwindow is not in unix format now.
+   -The millisecond part of the timestamp is correct now.
+
+
+Beta 9:
+
+10 June 2003:
+   -Fixed a bug where detaching would crash the client.
+   -Compiled with Visual Studio .NET 2003, hope that doesn't break anything *ducks*.
+
+Beta 8:
+
+7 June 2003:
+   -Q121093: Fixed a bug in the DebugLoop which made UOLog swallow a lot of packets. Now it's even working on RunUO.
+   -Q108315: Added "Always on Top" option.
+   -Q109550: Changed the PacketWindow's internal behaviour. It won't need memory anymore, that means it can hold
+    an unlimited amount (Well, 4Gb) of text without lagging like older versions.
+    I had 1Mb of text in the logwindow and it didn't lag, before it started to lag at 100kb.
+    Unfortunately this broke AutoScrolling a bit, if you have the scrollbar at the bottom of the window,
+    it will still autoscroll, regardless of the settings. But if you move the bar up one pixel, it won't scroll.
+    I think that's better than a lagging logwindow.
+   -Assertions now generate dumps, too. UOLog still didn't crash for me yet, after 6 months of using it.
+   -Converted the whole project to pure C.
+   -Added more packet names.
+
+Beta 7:
+
+5 June 2003:
+   -*If* UOLog crashes, it will now generate CrashDumps (like POL's).
+    Two crashdumps will be generated, a small and a big one.
+    This feature requires DbgHelp.dll, included in Windows XP, versions
+    for older Windows' are downloadble from Microsoft.com.
+    If you can compress the big one to <=3Mb, please mail it to me.
+    Else mail me the other one.
+    Note that the big one might contain your account data (The big one
+    sends UOLog's memory, which contains the LogWindow contents, which
+    may contain your login packets).
+
+   -Fixed a very stupid error which was introduced in Beta 5.
+    The error was that the filter didn't work, resulting in no packets
+    being logged. Heh.
+
+Beta 6:
+
+2 June 2003:
+   -DeBPXs are no longer required! Thanks to DarkStorm for the idea with EXCEPTION_SINGLE_STEP.
+   -Options are no longer saved automatically, they are saveable via Options->SaveOptions and
+    automatically loaded at startup.
+
+Beta 5:
+
+8 Feb 2003:
+   -Added automatic option saving and loading.
+
+6 Feb 2003:
+   -Internal code cleanup to prepare the open source release.
+
+Beta 4:
+
+4 Feb 2003:
+   -Added Autoscrolling. Thanks to Arog <arog@elitecoder.net> for this feature.
+   -Fixed a bug when UO runs on a different CPU (on dual CPU systems) than UOLog.
+   -Fixed a major bug where UOLog would print random stuff into the packetlog if the
+    packet contained a '%' char (Reason was using fprintf for printing to the log; now using
+    fwrite).
+   -The packet statistics are now printed into the log even if you close UOLog before closing the
+    client.
+
+Beta 3:
+
+15 Jan 2003:
+   -Added automatic log flushing.
+   -Optimized GetPacketName.
+   -Fixed log clearing.
+
+Beta 2:
+
+14 Jan 2003:
+   -Fixed a bug in the BPX handling which made UOLog unable to use on Win98 / 2000.
+   -Released.
+
+10 Jan 2003:
+   -Changed old 'logwindow' to a richedit wrapperclass. Still in development.
+
+09 Jan 2003:
+   -Improved my Breakpoint wrapperclass to be faster.
+
+08 Jan 2003:
+   -Major code cleanup, reduced size from 1200 lines of code to 800 lines of code.
+   -Improved the performance.
+
+07 Jan 2003:
+   -Minor code cleanups. Should run more stable now (It never crashed for me yet).
+
+06 Jan 2003:
+   -Fixed a very small resource leak (Clienthandle not being CloseHandle()'d).
+   -Added assertions to help detecting bugs.
+
+05 Jan 2003:
+   -Added validation of RecvBuffer and SendBuffer.
+   -If you specify 32 bit registers for length,
+    UOLog will use the 16 bit ones now. That is due to
+    changes in newer clients. (Internally: 32 bit reg AND 0xFFFF)
+
+Beta 1:
+
+04 Jan 2003:
+   -Initial release.

@@ -1,0 +1,430 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Reversing UO by Folko</title>
+<style type="text/css">
+<!--
+.Text {  font-family: Arial, Helvetica, sans-serif; text-align: justify; font-size: small}
+a {  font-family: Arial, Helvetica, sans-serif; color: #00CC00; text-decoration: underline}
+-->
+</style>
+</head>
+
+<body TEXT="#CCCCCC" BGCOLOR="#001464" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<p align="center">&nbsp;</p>
+<table BORDER="1" CELLSPACING="2" WIDTH="98%" 22" height="50" align="center">
+  <tr bgcolor="000b37"> 
+    <td WIDTH="20%" height="9" bgcolor="00209d"> 
+      <p align="center"><font face="Arial" color="#FFFFFF">25 July 2002</font>
+    </td>
+    <td height="9" bgcolor="00209d"> 
+      <p align="center"><strong><font color="#FFFFFF" face="Arial">Reversing Ultima 
+        Online by Folko</font></strong> 
+    </td>
+    <td VALIGN="CENTER" WIDTH="20%" height="9" bgcolor="00209d"> 
+      <p align="center"><font
+    face="Arial" color="#FFFFFF">Win Code Reversing</font> 
+    </td>
+  </tr>
+</table>
+
+<table width="98%" border="0" align="center">
+  <tr>
+    <td width="50%" height="185"> 
+      <table border="1" cellspacing="2" width="90%" 22" height="0" align="center">
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target File:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">client.exe</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target Type:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">Game</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target URL:</b></font></div>
+          </td>
+          <td colspan="2" height="0" bgcolor="00209d"> 
+            <p align="center"><font face="Arial,Helvetica"><a href="http://www.owo.com">www.owo.com</a></font> 
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target Size:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">1.761.280 Bytes</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Tools:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica"> <a href="http://www.datarescue.com">IDA</a>, 
+              <a href="http://www.ultraedit.com">UltraEdit</a>, OllyDbg</font></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td height="185" width="50%"> 
+      <table border="1" cellspacing="2" width="90%" 22" height="46" align="center">
+        <tr bgcolor="000b37"> 
+          <td valign="CENTER" width="66" height="0" bgcolor="00209d"> 
+            <p align="center"><font
+    face="Arial, Helvetica, sans-serif" color="#FFFFFF"><small><b>Level:</b></small></font> 
+          </td>
+          <td valign="CENTER" width="224" height="0" bgcolor="00209d"> 
+            <p align="center"><font
+    face="Arial" color="#FFFFFF"><font size="2">Easy</font><font size="2"> [X]&nbsp; 
+              Medium [ ]&nbsp; Hard [ ]&nbsp;</font></font> 
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr width="90%">
+<p>&nbsp;</p>
+<table BORDER="1" CELLSPACING="2" WIDTH="95%" HEIGHT="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">1. 
+        Preface </font>
+    </td>
+  </tr>
+</table>
+
+<table width="95%" border="0" align="center" height="10">
+  <tr>
+    <td height="0" class="Text" valign="top">The biggest German ISP, <a href="http://www.t-online.de">T-Online</a>, 
+      cancelled their offer &quot;DayTime 90&quot;. I used that offer because 
+      Internet is very expensive in my area. Using DayTime 90 I paid $40 for 90 
+      hours a month. Now I have to use Call-By-Call, paying $1.10 / Hour. Because 
+      of that, I can only be online for about 15 minutes a day and got lot's of 
+      time now. <br>
+      So I'm just sitting here and writing some tuts for you. This is my first 
+      English tutorial about reversing UO, hope you like it. If I get some nice 
+      feedback I might write some more.<br>
+      This one is about enabling UOReport0.log, which provides some handy information. 
+      <br>
+      The Tutorial is about Client 3.0.8j Patch 10, but should work for all clients. 
+      <p class="MsoNormal">&nbsp;</p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">2. 
+        CheckOut </font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0"  class="Text" valign="top"> 
+      <p class="MsoNormal">At the beginning of each reversing session I check 
+        the target out. So let's open it in IDA. You should see something like 
+        this:<br>
+        <img src="IDA_StartScreen.JPG" width="389" height="461"> </p>
+      <p class="MsoNormal">Set the Kernel options 1 to this:<br>
+        <img src="IDA_Kernel1.JPG" width="325" height="396"> </p>
+      <p class="MsoNormal">Kernel options 2 to this:<br>
+        <img src="IDA_Kernel2.JPG" width="319" height="226"> </p>
+      <p class="MsoNormal">Processor options to this:<br>
+        <img src="IDA_Processor.JPG" width="359" height="308"> </p>
+      <p class="MsoNormal">Then press the OK button and wait until IDA's console 
+        displays &quot;The initial autoanalysis is finished.&quot;. Your screen 
+        shoud look like this now:<br>
+        <img src="IDA_Finished.JPG" width="1024" height="746"> </p>
+      <p class="MsoNormal">If you're new to Assembler, you might want to enable 
+        opcode help. To do so, Options-&gt;General-&gt;[x]Auto comments.<br>
+        Hmm... &quot;reached winmain!&quot;.. Doesn't that sound like some kind 
+        of log message for the client developers? Let's check out the function 
+        which processes this message. Double click &quot;sub_4E8E90&quot;.<br>
+        Oh, &quot;UOReport::message&quot;.. yep, that's the class which logs all 
+        important messages it seems. Let's rename the function to &quot;UOReportMessage&quot; 
+        by right clicking sub_4E8E90. Let's scroll up a bit. Aha! UOReport::warning.. 
+        Let's rename it, too. If you scroll up some more, you'll find UOReport::Error 
+        and UOReport::Fatal.<br>
+        If you paid attention, you noticed that all those UOReport methods call 
+        sub_4E8EF0, let's check this one out!<br>
+        If you scroll down in that function a bit, you'll find &quot;UOReport::outoutText&quot;, 
+        so let's rename the function to &quot;UOReportOutput&quot;. If you click 
+        the back arrow, you should be back in UOReport::Message. If you scroll 
+        down a bit from there, you'll find another function which calls UOReportOutput.. 
+        Since it doesn't push a caption, let's just name it &quot;UOReportOther&quot;. 
+        <br>
+        OK, UOReportOutput is right under UOReportOther, so let's go back to UOReportOutput.<br>
+        I've never seen any messages like &quot;reached winmain!&quot;, let's 
+        check what happens to those messages. Open the flowchart of UOReportOutput 
+        by clicking View-&gt;Graphs-&gt;Flow Chart or pressing F12:<br>
+        <img src="Flowchart.JPG" width="883" height="817"> </p>
+      <p class="MsoNormal">If you interpret this chart correctly, you see that 
+        the function first checks if a message was passed. If not, it exits. If 
+        yes, it formats the message and checks a flag (dword_5A001C). It looks 
+        like this in the source:<br>
+        <br>
+        if(UOReport.Flag&amp;0x20 &amp;&amp;UOReport.Flag&amp;0x8)<br>
+        &nbsp;MessageBox(hWnd, MessageKind, MessageBuffer, uType);</p>
+      <p class="MsoNormal">Let's rename dword_5A001C to UOReport_Flag and check 
+        the xrefs by right clicking it and chosing &quot;Jump to xref to operand...&quot;:<br>
+        <img src="flags.JPG" width="551" height="262"> </p>
+      <p class="MsoNormal">Ah, it's written to at 5 locations. *Counts: Fatal, 
+        Error, Warning, Message, Other* 5. Let's visit each of the &quot;w(write 
+        access)&quot; locations. <br>
+        This is what it looks like:<br>
+        <br>
+        Fatal: 0x3F<br>
+        Error: 0x1F<br>
+        Warning: 0x15<br>
+        Message: 0x15<br>
+        Other: 0x15<br>
+        <br>
+        Open windows calculator in science mode and enter 3F in hex mode. Then 
+        hit the AND button and enter 20. Do that for each method. You should come 
+        to the following conclusion:<br>
+        <br>
+        Fatal -&gt; MessageBox<br>
+        Error-&gt; MessageBox<br>
+      </p>
+      <p class="MsoNormal">But I assume you want the other kinds of messages, 
+        too! <br>
+      </p>
+      </td>
+  </tr>
+</table>
+<p class="Text">&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">3. 
+        OllyDbg </font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0"  class="Text" valign="top"> 
+      <p class="MsoNormal">Load client.exe into OllyDbg. Hit ctrl + g and enter 
+        0x4E8E90 to go to that address. Locate the &quot;MOV [DWORD DS:5A001C],15&quot;. 
+        Right click on it and choose Binary -&gt; Edit. Change the 15 at the end 
+        to 3F. Do that for Warning, Message and Other. When you're done, hit the 
+        &quot;play&quot; button. <br>
+        Aaaaah! A messagebox popped up! &quot;created file 'UOReport0.log' for 
+        writing.&quot;<br>
+        Hmm.. I've noticed that this file exists, but it was always empty!<br>
+        Click OK in that messagebox. ARG, like 100 Messageboxes popping up after 
+        that, messagebox seems not to be a good method for displaying those messages.. 
+        Close the client and OllyDbg again and go back to IDA. </p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">4. 
+        IDA Part 2</font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0" valign="top">
+      <p>Go to the end of UOReportOutput, right above the messagebox (loc_4E8F92 
+        in 308j).<br>
+        Mark the block from &quot;mov al, ... &quot; to &quot;call ds:MessageBoxA&quot;, 
+        right click it and hit &quot;Undefine&quot;.<br>
+        Hmm, the first messagebox was &quot;Created file .... for writing&quot;. 
+        Why not write all the stuff into that file? <br>
+        Mark the current position for later by clicking Jump-&gt;Mark Position. 
+        <br>
+        Let's check what happens to UOReport0.log. <br>
+        Go to the beginning of the listing by hitting POS1 3 times in a row. (POS1 
+        is a key on the keyboard, no idea what it's called on english keyboards, 
+        I think it's 'Home' or so).<br>
+        Now do Search-&gt;Text (Alt+T). Enter &quot;UOReport: created file &quot;<br>
+        After a few seconds, it should find a result at 4E8C62. If you scroll 
+        up a bit, you see that it attemped to create &quot;UOErrata%d.log&quot;, 
+        thats not what we want. <br>
+        But if you scroll down a bit, you'll see &quot;UOReport%d.log&quot; and 
+        a call to _fopen.<br>
+        _fopen sounds good, it returns the handle we need to write the information. 
+        The handle is stored in dword_DED670. Rename it to &quot;UOReport_hLog&quot;. 
+      </p>
+      <p>Go back to the marked position by clicking Jump - &gt; Jump to marked 
+        position.<br>
+        Now we're changing the exe. This is illegal in some countries (Just FYI). 
+        <br>
+        Click Edit-&gt;Patch Program-&gt;Assemble. Wow. IDA has a built in Assembler, 
+        really handy!<br>
+        <br>
+        Let's think.. what do we have to do in order to get the infos to the file 
+        opened with fopen? Right, fprintf. <br>
+        In C: fprintf(UOReport_hLog, Buffer);<br>
+        But wait, what's the address of the buffer? Hit ESC again and scroll up 
+        a bit. Ah, __vsnprintf formats the message. The first parameter passed 
+        to it is the address of the output Buffer. Remember we are in assembler, 
+        so the first parameter is the last one! It's byte_DECE70. Rename it to 
+        UOReport_Buffer.</p>
+      <p>Now, how would it look in ASM? I did it like this:<br>
+        mov eax, [UOReport_hLog]<br>
+        push UOReport_Buffer<br>
+        push eax<br>
+        call _fprintf<br>
+        push eax<br>
+        call __flush</p>
+      <p>After you're done entering that, it looks like this:<br>
+        .text:004E8F92 loc_4E8F92: ; CODE XREF: UOReportOutput+8E<br>
+        .text:004E8F92 mov eax, UOReport_hLog<br>
+        .text:004E8F97 push offset UOReport_Buffer<br>
+        .text:004E8F9C push eax<br>
+        .text:004E8F9D call _fprintf<br>
+        .text:004E8FA2 push eax<br>
+        .text:004E8FA3 call __flush<br>
+        .text:004E8FA8 adc eax, offset MessageBoxA<br>
+        .text:004E8FAD <br>
+        .text:004E8FAD loc_4E8FAD: ; CODE XREF: UOReportOutput+30<br>
+      </p>
+      <p>adc eax, offset MessageBoxA doesn't sound correct, let's remove it. Undefine 
+        it and &quot;nop it&quot; by assembling it to &quot;nop nop nop ... &quot;. 
+        Looks like this:<br>
+        .text:004E8FA3 call __flush<br>
+        .text:004E8FA8 nop<br>
+        .text:004E8FA9 nop<br>
+        .text:004E8FAA nop<br>
+        .text:004E8FAB nop<br>
+        .text:004E8FAC nop<br>
+        .text:004E8FAD <br>
+        .text:004E8FAD loc_4E8FAD: ; CODE XREF: UOReportOutput+30<br>
+        .text:004E8FAD ; DATA XREF: sub_4E8FBE<br>
+        .text:004E8FAD mov ecx, [ebp+var_C]<br>
+        <br>
+        Hooray, we're done with the IDA part! Last thing we have to do is modifying 
+        the actual .exe. File-&gt;Produce-&gt;Create .dif file<br>
+      </p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p><table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">5. 
+        UltraEdit</font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0" valign="top"> My .dif file looks like this:<br>
+      <br>
+      This difference file is created by The Interactive Disassembler client.exe<br>
+        000E8F92: A0 A1<br>
+        000E8F93: 1C 70<br>
+        000E8F94: 00 D6<br>
+        000E8F95: 5A DE<br>
+        000E8F97: A8 68<br>
+        000E8F98: 20 70<br>
+        000E8F99: 74 CE<br>
+        000E8F9A: 12 DE<br>
+        000E8F9B: A8 00<br>
+        000E8F9C: 08 50<br>
+        000E8F9D: 74 E8<br>
+        000E8F9E: 0E 07<br>
+        000E8F9F: 53 B2<br>
+        000E8FA0: 56 01<br>
+        000E8FA1: 68 00<br>
+        000E8FA2: 70 50<br>
+        000E8FA3: CE E8<br>
+        000E8FA4: DE DC<br>
+        000E8FA5: 00 D4<br>
+        000E8FA6: 53 01<br>
+        000E8FA7: FF 00<br>
+        000E8FA8: 15 90<br>
+        000E8FA9: 50 90<br>
+        000E8FAA: A2 90<br>
+        000E8FAB: 52 90<br>
+        000E8FAC: 00 90<br>
+      <br>
+      The left side is the &quot;old&quot; client, the right side is the &quot;new&quot; 
+      client. You can simply apply these changes by pressing ctrl+g in UEdit and 
+      entering 0xE8F92. Then apply all the changes.<br>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p><table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">6. 
+        Testing </font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0" valign="top"> 
+      <p class="MsoNormal"><font face="Arial" size="2">The moment has come! Open 
+        your client, wait until it's fully loaded and close it again. Now fasten 
+        your seatbelt and open UOReport0.log.<br>
+        WEEEEEEEE! It really worked! Reversers own the world!<br>
+        <br>
+        If you got some time, try removing the Multi UO protection off your client, 
+        it's not harder than this was... (Doh! Actually its way easier, maybe 
+        I should have written the tutorial about that, but oh well..)<br>
+        <br>
+        Funny message I found in the log:<br>
+        &quot;FileManager::getHDPath: had to startup FileManager. UO startup code 
+        needs to be re-designed!&quot;</font></p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">7. 
+        The End</font> 
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0" valign="top"> 
+      <p class="MsoNormal">Took me about 2 hours to write this tutorial, so I'd 
+        be pleased if I get some <a href="mailto:folko@elitecoder.net">feedback</a>...<br>
+        <br>
+        Thanks to ChiLlar163 for this great layout.<br>
+        Thanks to the <a href="http://www.elitecoder.net">elitecoder.net network</a> 
+        for hosting my page.<br>
+        Thanks to Robyn for giving me an UO CD Key so I could sniff some stuff 
+        there.<br>
+        Thanks to Max for helping me with sniffing packets.<br>
+        Thanks to EA for not updating the client's source and releasing a new 
+        UO before finishing the previous versions, you're <s>almost</s> like M$.</p>
+      <p class="MsoNormal">Contacts:<br>
+        Mail: Folko@Elitecoder.net<br>
+        ICQ: 59280495<br>
+        HTTP: <a href="http://uo.elitecoder.net">http://uo.elitecoder.net</a><br>
+        IRC: </p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr WIDTH="90%">
+<p><font size="-2" face="Verdana, Arial, Helvetica, sans-serif">Tutorial by: <a href="mailto:Folko@elitecoder.net">Folko</a><br>
+  Page Design: &nbsp;&nbsp;&nbsp;&nbsp; 29 April 2000 by ChiLlar163</font></p>
+</body>
+</html>

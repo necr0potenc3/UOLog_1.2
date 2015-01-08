@@ -1,0 +1,585 @@
+UOReport: created file 'UOReport0.log' for writing.
+UOReport: starting up...
+UOReport: started.
+reached winmain!
+MemoryManager::start
+MemoryManager::started
+FileManager::startup: starting...
+FileManager::setHDPath: set HDPath to 'c:\games&movies\UOr\'
+FileManager::addSearchPath: search paths are:
+ c:\games&movies\UOr\
+FileManager::setCDPath: set CDPath to 'c:\games&movies\UOr\client\'
+FileManager::addSearchPath: search paths are:
+ c:\games&movies\UOr\
+ c:\games&movies\UOr\client\
+FileManager::addSearchPath: search paths are:
+ c:\games&movies\UOr\
+ c:\games&movies\UOr\client\
+ c:\games&movies\UOr\tutorial\
+FileManager::addSearchPath: search paths are:
+ c:\games&movies\UOr\
+ c:\games&movies\UOr\client\
+ c:\games&movies\UOr\tutorial\
+ c:\games&movies\UOr\client\tutorial\
+FileManager::startup: search paths are:
+ c:\games&movies\UOr\
+ c:\games&movies\UOr\client\
+ c:\games&movies\UOr\tutorial\
+ c:\games&movies\UOr\client\tutorial\
+FileManager::getHDPath: had to startup FileManager. UO startup code needs to be re-designed!
+FileManager::startup: starting...
+MouseManager::startup: begin.
+GraphicManager::startup: begin.
+FileManager::open: begin. filename='palette.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\palette.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\palette.mul' added to list. size is 768.
+FileManager::open: opened 'c:\games&movies\UOr\palette.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\palette.mul'.
+FileManager::open: begin. filename='animinfo.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\animinfo.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\animinfo.mul' added to list. size is 2000.
+FileManager::open: opened 'c:\games&movies\UOr\animinfo.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\animinfo.mul'.
+DrawManager::startup: begin.
+TextManager::startup: begin.
+MapManager::startup: begin.
+SkipDrawHandler::startup: begin.
+CVersionManager::startup: begin.
+HueManager::startup: begin.FileManager::open: begin. filename='hues.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\hues.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\hues.mul' added to list. size is 265500.
+FileManager::open: opened 'c:\games&movies\UOr\hues.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\hues.mul'.
+FontManager::startup: starting...
+FileManager::open: begin. filename='fonts.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\fonts.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\fonts.mul' added to list. size is 884781.
+FileManager::open: opened 'c:\games&movies\UOr\fonts.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+CFont::CFont(): begin.
+FileManager::close: closing file 'c:\games&movies\UOr\fonts.mul'.
+FontManager::startup: started.
+CObjectManager::startup: begin.
+FileManager::open: begin. filename='tiledata.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\tiledata.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\tiledata.mul' added to list. size is 1036288.
+FileManager::open: opened 'c:\games&movies\UOr\tiledata.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\tiledata.mul'.
+CGumpManager::startup(): begin.
+FileManager::open: begin. filename='skillgrp.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\skillgrp.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\skillgrp.mul' added to list. size is 255.
+FileManager::open: opened 'c:\games&movies\UOr\skillgrp.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\skillgrp.mul'.
+PacketManager::startup: begin.
+CWinApp::startup(): begin.
+CDHDCache::startup(): begin.
+FileManager::open: begin. filename='uo.cfg'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\uo.cfg' with mode 'r'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\uo.cfg' added to list. size is 1456.
+FileManager::open: opened 'c:\games&movies\UOr\uo.cfg' with mode 'r'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\uo.cfg'.
+FileManager::open: begin. filename='login.cfg'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\login.cfg' with mode 'r'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\login.cfg' added to list. size is 107.
+FileManager::open: opened 'c:\games&movies\UOr\login.cfg' with mode 'r'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\login.cfg'.
+FileManager::open: begin. filename='chardata.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\chardata.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\chardata.mul' added to list. size is 20.
+FileManager::open: opened 'c:\games&movies\UOr\chardata.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\chardata.mul'.
+FileManager::open: begin. filename='keynames.txt'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\keynames.txt' with mode 'r'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\keynames.txt' added to list. size is 410.
+FileManager::open: opened 'c:\games&movies\UOr\keynames.txt' with mode 'r'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\keynames.txt'.
+FileManager::open: begin. filename='macros.txt'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\macros.txt' with mode 'rt'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\macros.txt' added to list. size is 576.
+FileManager::open: opened 'c:\games&movies\UOr\macros.txt' with mode 'rt'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\macros.txt'.
+FileManager::open: begin. filename='speech.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\speech.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\speech.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\tutorial\speech.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\tutorial\speech.mul' with mode 'rb'.
+FileManager::open: failed to open 'speech.mul' with given mode 'rb' on any of paths in searchPaths.
+FileManager::open ('fuzzy find'): looking for 'speech.mul' on searchPaths, but ignoring case.
+FileManager::open: failed to open 'speech.mul' with given mode 'rb' on any of paths in searchPaths, even by ignoring case.
+SoundManager::CSoundManager(): begin.
+PathManager::startup: begin.
+MultiManager::startup: begin.
+FileManager::open: begin. filename='regions.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\regions.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\regions.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\tutorial\regions.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\tutorial\regions.mul' with mode 'rb'.
+FileManager::open: failed to open 'regions.mul' with given mode 'rb' on any of paths in searchPaths.
+FileManager::open ('fuzzy find'): looking for 'regions.mul' on searchPaths, but ignoring case.
+FileManager::open: failed to open 'regions.mul' with given mode 'rb' on any of paths in searchPaths, even by ignoring case.
+RegionManager::readRegionsIntoMemory: cannot open file 'regions.mul'.
+WeatherManager::startup: begin.
+FileManager::open: begin. filename='animdata.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\animdata.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\animdata.mul' added to list. size is 1122304.
+FileManager::open: opened 'c:\games&movies\UOr\animdata.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\animdata.mul'.
+thelightthingie::startup:CMMF::CMMF: begin. file 'c:\games&movies\UOr\\lightidx.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\light.mul'
+FileManager::open: begin. filename='helpindx.dat'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\helpindx.dat' with mode 'r'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\helpindx.dat' added to list. size is 5034.
+FileManager::open: opened 'c:\games&movies\UOr\helpindx.dat' with mode 'r'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\helpindx.dat'.
+FileManager::open: begin. filename='uobscene.lst'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\uobscene.lst' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\uobscene.lst' added to list. size is 1048.
+FileManager::open: opened 'c:\games&movies\UOr\uobscene.lst' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\uobscene.lst'.
+FileManager::open: begin. filename='ignore.lst'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\ignore.lst' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\ignore.lst' added to list. size is 0.
+FileManager::open: opened 'c:\games&movies\UOr\ignore.lst' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::read: items_read(0) != count(30)
+FileManager::close: closing file 'c:\games&movies\UOr\ignore.lst'.
+CDHDCache::Init(): begin.
+CDHDCache::Init(): CApp::hdConfig == MaxHD.
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\map0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\staidx0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\statics0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\artidx.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\art.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\anim.idx'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\anim.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\soundidx.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\sound.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\texidx.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\texmaps.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\gumpidx.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\gumpart.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\multi.idx'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\multi.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\skills.idx'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\skills.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadifi0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadif0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadifi1.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadif1.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadifi2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadif2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadifi3.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\stadif3.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\mapdif0.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\mapdif1.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\mapdif2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\mapdif3.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\map2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\staidx2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\statics2.mul'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\anim2.idx'
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\anim2.mul'
+LoadVersionFile(): begin.
+FileManager::open: begin. filename='verdata.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\verdata.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\verdata.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\tutorial\verdata.mul' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\tutorial\verdata.mul' with mode 'rb'.
+FileManager::open: failed to open 'verdata.mul' with given mode 'rb' on any of paths in searchPaths.
+FileManager::open ('fuzzy find'): looking for 'verdata.mul' on searchPaths, but ignoring case.
+FileManager::open: failed to open 'verdata.mul' with given mode 'rb' on any of paths in searchPaths, even by ignoring case.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+CStreamBuf::CStreamBuf(): begin.
+MusicManager::CMusicManager(): begin.
+CNetInfo::CNetInfo(): begin.
+FileManager::open: begin. filename='language\langcode.iff'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\language\langcode.iff' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\language\langcode.iff' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\tutorial\language\langcode.iff' with mode 'rb'.
+FileManager::open: trying to open 'c:\games&movies\UOr\client\tutorial\language\langcode.iff' with mode 'rb'.
+FileManager::open: failed to open 'language\langcode.iff' with given mode 'rb' on any of paths in searchPaths.
+FileManager::open ('fuzzy find'): looking for 'language\langcode.iff' on searchPaths, but ignoring case.
+FileManager::open: failed to open 'language\langcode.iff' with given mode 'rb' on any of paths in searchPaths, even by ignoring case.
+FileManager::load: failed to load 'language\langcode.iff'.
+FileManager::open: begin. filename='langcode.iff'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\langcode.iff' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\langcode.iff' added to list. size is 4612.
+FileManager::open: opened 'c:\games&movies\UOr\langcode.iff' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'langcode.iff'. allocating 4612 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\langcode.iff'.
+LanguageManager::loadLanguageCodes: loaded 4612 bytes from file 'langcode.iff'.
+LanguageManager::loadLanguageCodes: loaded language codes.
+LanguageManager::setLanguageDefaults: start...
+LanguageManager::setUserLanguageCodeString: userLanguageCodeString='ENU'.
+LanguageManager::setLanguageDefaults: stop...
+FileManager::open: begin. filename='uo.cfg'
+FileManager::open: file 'uo.cfg' now open 2 times.
+FileManager::open: finished searching list of opened files.
+FileManager::open: seeking to start of file.
+getUOCfgDirective: found 'CdRomDataPath'.
+getUOCfgDirective: found 'CacheSize'.
+getUOCfgDirective: found 'HdUsage'.
+getUOCfgDirective: found 'SavePassword'.
+getUOCfgDirective: found 'Password'.
+getUOCfgDirective: found 'FilterPassword'.
+getUOCfgDirective: found 'TranslationServerIPAddress'.
+getUOCfgDirective: found 'TranslationServerTranslatorName'.
+getUOCfgDirective: found 'TranslationServerSystranNFWMarker'.
+getUOCfgDirective: found 'TranslationServerSystranTopicalGlossaries'.
+getUOCfgDirective: found 'TranslationServerSystranDocumentType'.
+getUOCfgDirective: found 'TranslationServerAutomaticTranslation'.
+getUOCfgDirective: found 'TranslationServerClickTranslation'.
+getUOCfgDirective: found 'ClientFirstLaunch'.
+getUOCfgDirective: found 'NextLoginKey'.
+getUOCfgDirective: found 'LastServerID'.
+getUOCfgDirective: found 'PlayerName'.
+getUOCfgDirective: found 'DefaultChar'.
+getUOCfgDirective: found 'ClientLogin'.
+getUOCfgDirective: found 'CurrentVer'.
+getUOCfgDirective: found 'LastTip'.
+getUOCfgDirective: found 'ShowTips'.
+getUOCfgDirective: found 'AcctID'.
+getUOCfgDirective: found 'AcctPassword'.
+getUOCfgDirective: found ';------------------------------'.
+getUOCfgDirective: found 'Sound'.
+getUOCfgDirective: found 'Music'.
+getUOCfgDirective: found 'Footsteps'.
+getUOCfgDirective: found 'AllowPathfind'.
+getUOCfgDirective: found 'HoldTabForCombat'.
+getUOCfgDirective: found 'OffsetGumps'.
+getUOCfgDirective: found 'AutoArrangeMinimized'.
+getUOCfgDirective: found 'AssumePlayAsGhost'.
+getUOCfgDirective: found 'UseCircleTrans'.
+getUOCfgDirective: found 'ScaleBarkTimes'.
+getUOCfgDirective: found 'FrameSkipping'.
+getUOCfgDirective: found 'NotorietyQuery'.
+getUOCfgDirective: found 'ShowIntroAnim'.
+getUOCfgDirective: found 'OrderCacheOnStartup'.
+getUOCfgDirective: found 'SaveJournal'.
+getUOCfgDirective: found 'JournalSaveUnicode'.
+getUOCfgDirective: found 'RememberAcctPW'.
+getUOCfgDirective: found 'GlobalQueue'.
+getUOCfgDirective: found 'FilterPWOn'.
+getUOCfgDirective: found 'ObscenityFilter'.
+getUOCfgDirective: found 'FullScreen'.
+getUOCfgDirective: found 'UseToolTips'.
+getUOCfgDirective: found 'PopupHelpEnabled'.
+getUOCfgDirective: found 'PopupHelpSticky'.
+getUOCfgDirective: found 'PopupHelpPersistant'.
+getUOCfgDirective: found 'TranslationServer'.
+getUOCfgDirective: found 'TranslationServerAutomatic'.
+getUOCfgDirective: found 'ColoredLighting'.
+getUOCfgDirective: found 'ShadedFonts'.
+getUOCfgDirective: found 'ShowIncomingNames'.
+getUOCfgDirective: found 'StatReport'.
+getUOCfgDirective: found 'DarkNights'.
+getUOCfgDirective: found 'AlwaysRun'.
+getUOCfgDirective: found 'NewbieDesktop'.
+getUOCfgDirective: found 'TreeCanopies'.
+getUOCfgDirective: found 'Desolation'.
+getUOCfgDirective: found 'CombatMusic'.
+getUOCfgDirective: found 'ShiftForContext'.
+getUOCfgDirective: found 'DisableMenubar'.
+getUOCfgDirective: found 'UnicodeSpeech'.
+getUOCfgDirective: found 'PartyMessageColor'.
+getUOCfgDirective: found 'FullScreenRes'.
+getUOCfgDirective: found 'GamePlayWindowSize'.
+FileManager::close: closing file 'c:\games&movies\UOr\uo.cfg'.
+LanguageManager::findSupportedLanguages.
+LanguageManager::preLoad.
+LanguageManager::preLoad: user language set to 'ENU'.
+FileManager::open: begin. filename='intro.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\intro.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\intro.ENU' added to list. size is 1816.
+FileManager::open: opened 'c:\games&movies\UOr\intro.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'intro.ENU'. allocating 1816 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\intro.ENU'.
+FileManager::open: begin. filename='gt_0000.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_0000.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_0000.ENU' added to list. size is 124.
+FileManager::open: opened 'c:\games&movies\UOr\gt_0000.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_0000.ENU'. allocating 124 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_0000.ENU'.
+FileManager::open: begin. filename='gt_1010.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_1010.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_1010.ENU' added to list. size is 372.
+FileManager::open: opened 'c:\games&movies\UOr\gt_1010.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_1010.ENU'. allocating 372 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_1010.ENU'.
+FileManager::open: begin. filename='gt_2000.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_2000.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_2000.ENU' added to list. size is 302.
+FileManager::open: opened 'c:\games&movies\UOr\gt_2000.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_2000.ENU'. allocating 302 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_2000.ENU'.
+FileManager::open: begin. filename='gt_2310.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_2310.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_2310.ENU' added to list. size is 84.
+FileManager::open: opened 'c:\games&movies\UOr\gt_2310.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_2310.ENU'. allocating 84 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_2310.ENU'.
+FileManager::open: begin. filename='gt_2400.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_2400.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_2400.ENU' added to list. size is 198.
+FileManager::open: opened 'c:\games&movies\UOr\gt_2400.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_2400.ENU'. allocating 198 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_2400.ENU'.
+FileManager::open: begin. filename='gt_5000.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_5000.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_5000.ENU' added to list. size is 276.
+FileManager::open: opened 'c:\games&movies\UOr\gt_5000.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_5000.ENU'. allocating 276 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_5000.ENU'.
+FileManager::open: begin. filename='gt_5400.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\gt_5400.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\gt_5400.ENU' added to list. size is 90.
+FileManager::open: opened 'c:\games&movies\UOr\gt_5400.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'gt_5400.ENU'. allocating 90 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\gt_5400.ENU'.
+FileManager::open: begin. filename='skilname.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\skilname.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\skilname.ENU' added to list. size is 628.
+FileManager::open: opened 'c:\games&movies\UOr\skilname.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'skilname.ENU'. allocating 628 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\skilname.ENU'.
+FileManager::open: begin. filename='chat.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\chat.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\chat.ENU' added to list. size is 4240.
+FileManager::open: opened 'c:\games&movies\UOr\chat.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'chat.ENU'. allocating 4240 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\chat.ENU'.
+FileManager::open: begin. filename='options.ENU'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\options.ENU' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\options.ENU' added to list. size is 5342.
+FileManager::open: opened 'c:\games&movies\UOr\options.ENU' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'options.ENU'. allocating 5342 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\options.ENU'.
+LanguageManager::startup: user language set to 'ENU'.
+CSocket::CSocket() begin.
+CGMSSock::CGMSSock(): begin.
+CMapGump::CMapGump(): begin.
+GameAreaEdgeGump::GameAreaEdgeGump(int which): begin.
+GameAreaEdgeGump::GameAreaEdgeGump(int which): begin.
+GameAreaEdgeGump::GameAreaEdgeGump(int which): begin.
+GameAreaEdgeGump::GameAreaEdgeGump(int which): begin.
+FileManager::open: begin. filename='verinfo'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\verinfo' with mode 'r'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\verinfo' added to list. size is 35.
+FileManager::open: opened 'c:\games&movies\UOr\verinfo' with mode 'r'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\verinfo'.
+CInputWindow::CInputWindow(): begin.
+CSocket::CSocket() begin.
+GroupedPackets::GroupedPackets(): begin.
+CClientSock::CClientSock(): begin.
+WinMain: just before main program loop.
+FileManager::open: begin. filename='intloc00.enu'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\intloc00.enu' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\intloc00.enu' added to list. size is 9648.
+FileManager::open: opened 'c:\games&movies\UOr\intloc00.enu' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'intloc00.enu'. allocating 9648 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\intloc00.enu'.
+FileManager::open: begin. filename='unifont.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\unifont.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\unifont.mul' added to list. size is 1435288.
+FileManager::open: opened 'c:\games&movies\UOr\unifont.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\unifont.mul'.
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\unifont.mul'
+FileManager::open: begin. filename='unifont1.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\unifont1.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\unifont1.mul' added to list. size is 1433134.
+FileManager::open: opened 'c:\games&movies\UOr\unifont1.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\unifont1.mul'.
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\unifont1.mul'
+FileManager::open: begin. filename='unifont2.mul'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\unifont2.mul' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\unifont2.mul' added to list. size is 1432845.
+FileManager::open: opened 'c:\games&movies\UOr\unifont2.mul' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::close: closing file 'c:\games&movies\UOr\unifont2.mul'.
+CMMF::CMMF: begin. file 'c:\games&movies\UOr\\unifont2.mul'
+FileManager::open: begin. filename='intloc01.enu'
+FileManager::open: finished searching list of opened files.
+FileManager::open: looking for file with name 'as-is' on all search paths.
+FileManager::open: trying to open 'c:\games&movies\UOr\intloc01.enu' with mode 'rb'.
+FileManager::addOpenFile: file 'c:\games&movies\UOr\intloc01.enu' added to list. size is 464.
+FileManager::open: opened 'c:\games&movies\UOr\intloc01.enu' with mode 'rb'.
+FileManager::open: seeking to start of file.
+FileManager::load: file 'intloc01.enu'. allocating 464 bytes of memory
+FileManager::close: closing file 'c:\games&movies\UOr\intloc01.enu'.
+thelightthingie::shutdown:CApp::shutdown: begin.
+CDHDCache::shutdown: shutting down...
+CDHDCache::shutdown: removing cache file 'c:\games&movies\UOr\cache0.uo'
+CDHDCache::shutdown: shut down
+CGumpManager::shutdown(): begin.
+CMapGump::~CMapGump()
+FontManager::shutdown: stopping...
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+CFont::~CFont()
+FontManager::shutdown: stopped.
+FileManager::shutdown: stopping...
+FileManager::reportOpenFiles:
+ open timesOpened         size numreads            givenName actualName
+   no           1          768        1          palette.mul c:\games&movies\UOr\palette.mul
+   no           1         2000     2000         animinfo.mul c:\games&movies\UOr\animinfo.mul
+   no           1       265500   105000             hues.mul c:\games&movies\UOr\hues.mul
+   no           1       884781     8985            fonts.mul c:\games&movies\UOr\fonts.mul
+   no           1      1036288   196608         tiledata.mul c:\games&movies\UOr\tiledata.mul
+   no           1          255       54         skillgrp.mul c:\games&movies\UOr\skillgrp.mul
+   no           2         1456        0               uo.cfg c:\games&movies\UOr\uo.cfg
+   no           1          107        0            login.cfg c:\games&movies\UOr\login.cfg
+   no           1           20        2         chardata.mul c:\games&movies\UOr\chardata.mul
+   no           1          410        0         keynames.txt c:\games&movies\UOr\keynames.txt
+   no           1          576        0           macros.txt c:\games&movies\UOr\macros.txt
+   no           1      1122304    83968         animdata.mul c:\games&movies\UOr\animdata.mul
+   no           1         5034        0         helpindx.dat c:\games&movies\UOr\helpindx.dat
+   no           1         1048        0         uobscene.lst c:\games&movies\UOr\uobscene.lst
+   no           1            0        1           ignore.lst c:\games&movies\UOr\ignore.lst
+   no           1         4612        1         langcode.iff c:\games&movies\UOr\langcode.iff
+   no           1         1816        1            intro.ENU c:\games&movies\UOr\intro.ENU
+   no           1          124        1          gt_0000.ENU c:\games&movies\UOr\gt_0000.ENU
+   no           1          372        1          gt_1010.ENU c:\games&movies\UOr\gt_1010.ENU
+   no           1          302        1          gt_2000.ENU c:\games&movies\UOr\gt_2000.ENU
+   no           1           84        1          gt_2310.ENU c:\games&movies\UOr\gt_2310.ENU
+   no           1          198        1          gt_2400.ENU c:\games&movies\UOr\gt_2400.ENU
+   no           1          276        1          gt_5000.ENU c:\games&movies\UOr\gt_5000.ENU
+   no           1           90        1          gt_5400.ENU c:\games&movies\UOr\gt_5400.ENU
+   no           1          628        1         skilname.ENU c:\games&movies\UOr\skilname.ENU
+   no           1         4240        1             chat.ENU c:\games&movies\UOr\chat.ENU
+   no           1         5342        1          options.ENU c:\games&movies\UOr\options.ENU
+   no           1           35        0              verinfo c:\games&movies\UOr\verinfo
+   no           1         9648        1         intloc00.enu c:\games&movies\UOr\intloc00.enu
+   no           1      1435288        0          unifont.mul c:\games&movies\UOr\unifont.mul
+   no           1      1433134        0         unifont1.mul c:\games&movies\UOr\unifont1.mul
+   no           1      1432845        0         unifont2.mul c:\games&movies\UOr\unifont2.mul
+   no           1          464        1         intloc01.enu c:\games&movies\UOr\intloc01.enu
+FileManager::shutdown: stopped.
+MemoryManager::shutdown: stopping...
+MemoryManager::report:
+ MemoryManager__OVERLOAD_GLOBAL_NEW_AND_DELETE not defined. nothing to report.
+MemoryManager::stopped.
+UOReport: stopping...

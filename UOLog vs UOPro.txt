@@ -1,0 +1,15 @@
+I tried to make the output of UOLog same as UOPro's.
+Yet both tools have their advantages and disadvantages:
+
+UOLog Advantages:
+-In newer Windows versions you can start and stop UOLog anytime using attaching and detaching.
+-Has a more efficient client identification technique, so it will work with modified clients too.
+-Has a more customizable packet filter.
+-Has a GUI (!).
+-Internals are customizable via clients.cfg file
+-Is publicly available.
+-Doesn't need to know packetlengths.
+-Has more powerful packet statistics
+
+UOLog Disadvantages:
+-Doesn't have "Autopilot mode" and will never have it (I don't like stuff like that).

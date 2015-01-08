@@ -1,0 +1,287 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Reversing UO by Folko</title>
+<style type="text/css">
+<!--
+.Text {  font-family: Arial, Helvetica, sans-serif; text-align: justify; font-size: small}
+a {  font-family: Arial, Helvetica, sans-serif; color: #00CC00; text-decoration: underline}
+-->
+</style>
+</head>
+
+<body TEXT="#CCCCCC" BGCOLOR="#001464" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<p align="center">&nbsp;</p>
+<table BORDER="1" CELLSPACING="2" WIDTH="98%" 22" height="50" align="center">
+  <tr bgcolor="000b37"> 
+    <td WIDTH="20%" height="9" bgcolor="00209d"> 
+      <p align="center"><font face="Arial" color="#FFFFFF">06 June 2003</font> 
+    </td>
+    <td height="9" bgcolor="00209d"> 
+      <p align="center"><strong><font face="Arial" color="#FFFFFF">Finding UOLog 
+        values by Folko</font></strong>
+    </td>
+    <td VALIGN="CENTER" WIDTH="20%" height="9" bgcolor="00209d"> 
+      <p align="center"><font
+    face="Arial" color="#FFFFFF">Win Code Reversing</font> 
+    </td>
+  </tr>
+</table>
+
+<table width="98%" border="0" align="center">
+  <tr>
+    <td width="50%" height="185"> 
+      <table border="1" cellspacing="2" width="90%" 22" height="0" align="center">
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target File:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">client.exe</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target Type:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">Game</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target URL:</b></font></div>
+          </td>
+          <td colspan="2" height="0" bgcolor="00209d"> 
+            <p align="center"><font face="Arial,Helvetica"><a href="http://www.owo.com">www.owo.com</a></font> 
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Target Size:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica">-</font></div>
+          </td>
+        </tr>
+        <tr bgcolor="00209d"> 
+          <td height="0"> 
+            <div align="center"><font face="Arial,Helvetica"><b>Tools:</b></font></div>
+          </td>
+          <td colspan="2" height="0"> 
+            <div align="center"><font face="Arial,Helvetica"> <a href="http://www.datarescue.com">IDA</a>, 
+              <a href="http://www.ultraedit.com">UltraEdit</a>, <a href="http://home.t-online.de/home/ollydbg">OllyDbg</a>, 
+              any emulator</font></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td height="185" width="50%"> 
+      <table border="1" cellspacing="2" width="90%" 22" height="46" align="center">
+        <tr bgcolor="000b37"> 
+          <td valign="CENTER" width="66" height="0" bgcolor="00209d"> 
+            <p align="center"><font
+    face="Arial, Helvetica, sans-serif" color="#FFFFFF"><small><b>Level:</b></small></font> 
+          </td>
+          <td valign="CENTER" width="224" height="0" bgcolor="00209d"> 
+            <p align="center"><font
+    face="Arial" color="#FFFFFF"><font size="2">Easy</font><font size="2"> [ ]&nbsp; 
+              Medium [X]&nbsp; Hard [ ]&nbsp;</font></font> 
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr width="90%">
+<p>&nbsp;</p>
+<table BORDER="1" CELLSPACING="2" WIDTH="95%" HEIGHT="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">1. 
+        Preface </font>
+    </td>
+  </tr>
+</table>
+
+<table width="95%" border="0" align="center" height="10">
+  <tr>
+    <td height="0" class="Text" valign="top">Some people asked me how to find 
+      the values for UOLog's clients.cfg.<br>
+      This tutorial will show you how to find the client's Encrypt and uncompress 
+      routines. <br>
+      The first part shows the difficult approach, it requires no knowledge about 
+      the client's internals.<br>
+      The second part is based on the first part and shows you how to find the 
+      values for any client in a few seconds.<br>
+      If you're new to reversing or just want to find the values quickly, skip 
+      part 2 and move on to 3. 
+      <p class="MsoNormal">&nbsp;</p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">2. 
+        The difficult approach</font> 
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0"  class="Text" valign="top"> 
+      <p class="MsoNormal">Ok, let's go. Open your client (Assuming 4.0.0l) in 
+        IDA. Use default options and let IDA work. Eat some pasta in the meantime.<br>
+        When IDA is done, save the database. We'll need it later, not now.<br>
+        Now start any server emulator (My favourite is <a href="http://www.polserver.com">POL</a>) 
+        and open your client (One *with* encryption!).<br>
+        Next, open up OllyDbg and attach it to the client. Set a breakpoint on 
+        &quot;send&quot;.<br>
+        To do so, press ctrl+g and enter &quot;send&quot;. To set the actual breakpoint, 
+        press F2.<br>
+        Now enter any login and password and hit enter. Olly will break and popup.<br>
+        In the calling stack window in Olly (lower right), you can see the stack 
+        for send. &quot;DataSize&quot; is 0x3E, that's the correct length for 
+        the login packet. But look at &quot;Data&quot;, it's encrypted, and that's 
+        not how we want it in UOLog.<br>
+        The TOS (Top of Stack) always shows the return address of a call, ie. 
+        the location from where the call was made. Remove the breakpoint (F2) 
+        and go to that location with ctrl+g (419A08 in 4.0.0l).<br>
+        Ok, we're direct on the send call. The packets are encrypted there. 
+        If you scroll up a bit, you'll see the message &quot;dunno, select with 
+        invalid socket&quot;. Looks like we're in the client's send function. 
+        Set a breakpoint on top of that function (419980) and login again to make 
+        Olly break there.<br>
+        When it breaks, you'll notice that the function has no calling stack, 
+        ie. it's func(void);. Trace down using F8 and observe the register window. 
+        You'll notice that 4199E6 ECX contains the length. The next line puts 
+        the address of the encrypted send buffer into EDI.<br>
+        We put our breakpoint too late, the data is encrypted there already.<br>
+        Hmm, what can we do? Right! We put a breakpoint on the address of the 
+        encrypted send buffer. Right click on the first byte of the encrypted 
+        datastream in the dump window and select &quot;Breakpoint -&gt; Memory, 
+        on access&quot;. Now resume the client. Olly will break immediately, you'll 
+        see a rep stosd, that cleans up the memory by setting it to 00 00...Resume 
+        the client, login again, and olly will break again.<br>
+        Wow, this time we're in a loop (You'll recognize loops by black borders 
+        around them in olly). The loop is using shr, shl and some other binary 
+        operators. That really looks like the encryption loop, nice. Remove the 
+        memory breakpoint, but don't resume the client yet.<br>
+        Instead, place a breakpoint on top of the encrypt function (41A360) and 
+        then resume the client.<br>
+        Login again, and olly will break. Look at all the registers, EDX contains 
+        the length already. But the data isn't in the registers yet, so let's 
+        trace (F8) over the call which is right below the function header.<br>
+        Look at the registers! Great! EAX contains the length and ESI contains 
+        our packet! That's all we need for send.<br>
+        We have:<br>
+        Address where we have the plain packet: 41A370<br>
+        Register with the length: EAX<br>
+        Register with the packet: ESI<br>
+        <br>
+        Now for recv.<br>
+        We can't use the crypt client anymore because the server doesn't send 
+        back anything since our login packets aren't valid (Well, encrypted). 
+        So let's fire up a no-crypt-client and attach Olly to it.<br>
+        Login and go to a location without any NPCs and anything so you don't 
+        receive any packets.<br>
+        Remember that the client used &quot;select&quot; to check if there are 
+        packets ready to be received? Let's set a breakpoint on select.<br>
+        Of course Olly breaks immediately because the client constantly checks 
+        for packets (Btw, that's one reason why it needs 100% CPU all the time, 
+        but that's another story, PeekMessage). Go to the calling address (419803) and you'll 
+        see the check if select returned -1.<br>
+        Scroll down a bit and you'll see a call to recv inside a loop. If you 
+        know how TCP/IP works then you know that the packets arrive as a stream, 
+        not at once, that's why they're received in a loop. Place a break on top 
+        of that loop (41985C) and resume the client.<br>
+        It will break soon because it receives a ping reply packet. Go to the 
+        location where Olly displays &quot;Buffer&quot;. That's where recv will 
+        store the received data. Display it in the dump window, step over recv 
+        and then set a memory breakpoint on it.<br>
+        You'll notice that the memory just gets cleaned, so a memory on write 
+        breakpoint isn't correct. Set a &quot;On access&quot; breakpoint instead.<br>
+        If you did it right, you'll end up in some loop at 419BC0. Place a break 
+        on top of that function.<br>
+        When the client breaks, remove the breakpoint and go to the calling address 
+        (419D0C). You will see a big loop below the call. Trace a bit into that 
+        loop and you'll see that it builds the packet and calls 41A4A0 after building 
+        the packet.<br>
+        Trace into that function and look at the registers, EDI contains the length 
+        and ESI contains the packet. Done.<br>
+        Now we have all the information for recv:<br>
+        Address where we have the plain packet: 41A4A0<br>
+        Register with the length: EDI<br>
+        Register with the packet: ESI<br>
+        <br>
+        Now all we have to do is getting the timestamp of the client. Open client.exe 
+        in UltraEdit and search the PE header. It is on top of the file and starts 
+        with &quot;PE&quot;, in 4.0.0l it's at 0x0138. Skip the next WORD and 
+        the next DWORD and you'll have the TimeStamp in Little Endian. To convert 
+        it to human readable Big Endian, reverse the bytes, resulting in 3EBFECC0.<br>
+        That's it, we have all the required information for UOLog!<br>
+      </p>
+      </td>
+  </tr>
+</table>
+<p class="Text">&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">3. 
+        The easy approach</font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="2"  class="Text" valign="top"> 
+      <p class="MsoNormal">1) Open the client in IDA<br>
+        2) Scroll up to the top, press alt+t and search for &quot;], 33h&quot;<br>
+        3) Scroll to the top of that function. The address is the one UOLog uses 
+        for the RecvBuffer.<br>
+        4) Scroll to the top of the function above and find the &quot;mov bp, 
+        ax&quot;. That address is the one for the SendBuffer.<br>
+        5) To get the timestamp, open the client in y0da's PE editor and copy 
+        the timestamp.<br>
+        6) Play with the register numbers until it works. Usually, you can copy 
+        the numbers from the previous client.</p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="1" cellspacing="2" width="95%" height="22" align="center">
+  <tr bgcolor="000b37"> 
+    <td> 
+      <p align="left"><font size="+2" color="#FFFFFF" face="Arial, Helvetica, sans-serif">4. 
+        The End</font>
+    </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" height="10">
+  <tr> 
+    <td height="0" valign="top">Well, this tutorial was harder than my first one, 
+      I hope you still managed to understand it.<br>
+      If you have any questions, feel free to contact me:<br>
+      ICQ: 59280495<br>
+      Mail: <a href="mailto:folko@elitecoder.net">folko@elitecoder.net</a><br>
+      <br>
+      Greets to: All x90 members, especially Arog and NecroPotence.<br>
+      <br>
+      Final words:<br>
+      If you like the American Way Of Life, then I can't help you.<br>
+      Insprinc haptbandum, inuar u&icirc;gandun!<br>
+      B&ecirc;n zi b&ecirc;na, bluot zi bluoda, lid zi geliden, s&ocirc;se gelimida 
+      sin!</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr WIDTH="90%">
+<p><font size="-2" face="Verdana, Arial, Helvetica, sans-serif">Tutorial by: <a href="mailto:Folko@elitecoder.net">Folko</a><br>
+  Page Design: &nbsp;&nbsp;&nbsp;&nbsp; 29 April 2000 by ChiLlar163</font></p>
+</body>
+</html>

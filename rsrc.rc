@@ -1,0 +1,196 @@
+// Microsoft Visual C++ generated resource script.
+//
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "winresrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+ID_MAINMENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Quit",                        ID_FILE_QUIT
+    END
+    POPUP "Client"
+    BEGIN
+        MENUITEM "Attach",                      ID_CLIENT_ATTACH
+        MENUITEM "Detach",                      ID_CLIENT_DETACH
+        MENUITEM "Load",                        ID_CLIENT_LOAD
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Filter",                      ID_OPTIONS_FILTER
+        MENUITEM "Clear log",                   ID_OPTIONS_CLEAR
+        MENUITEM "Autoscrolling",               ID_OPTIONS_AUTOSCROLL
+        , CHECKED
+        MENUITEM "Always on Top",               ID_OPTIONS_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "Save Options",                ID_OPTIONS_SAVEOPTIONS
+    END
+    POPUP "Logging"
+    BEGIN
+        MENUITEM "Logfile",                     ID_LOGGING_LOGFILE
+        MENUITEM "Packetwindow",                ID_LOGGING_PACKETWINDOW
+        MENUITEM "Raw",                         ID_LOGGING_RAW
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOGEX 0, 0, 359, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,302,7,50,14
+    CONTROL         "Show all packets",IDC_ALL,"Button",BS_AUTORADIOBUTTON,7,
+                    7,69,10
+    CONTROL         "Show only incoming packets",IDC_INCOMING,"Button",
+                    BS_AUTORADIOBUTTON,7,19,107,10
+    CONTROL         "Show only outgoing packets",IDC_OUTGOING,"Button",
+                    BS_AUTORADIOBUTTON,7,32,104,10
+    EDITTEXT        IDC_ONLY,52,44,300,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NOT,52,61,300,14,ES_AUTOHSCROLL
+    LTEXT           "Display only",IDC_STATIC,7,45,42,8
+    LTEXT           "Don't display",IDC_STATIC,7,60,42,8
+    EDITTEXT        IDC_HEXLEX,52,79,300,14,ES_AUTOHSCROLL
+    LTEXT           "HexLex",IDC_STATIC,7,78,25,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""winresrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Home: http://uo.elitecoder.net Mail: folko@elitecoder.net"
+            VALUE "CompanyName", "elitecoder.net"
+            VALUE "FileDescription", "UOLog, a packetlogger for Ultima Online"
+            VALUE "FileVersion", "1, 2, 0, 0"
+            VALUE "InternalName", "UOLog"
+            VALUE "LegalCopyright", "Copyright (C) 2004 by Folko"
+            VALUE "OriginalFilename", "UOLog.exe"
+            VALUE "ProductName", "UOLog"
+            VALUE "ProductVersion", "1, 2, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 107
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

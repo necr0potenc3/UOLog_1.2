@@ -1,0 +1,20 @@
+Hi,
+
+this is Folko writing, the author of UOLog. I didn't release the source code
+of UOLog earlier because I had a fear that it might be used for purposes that
+I do not support, e.g. cheating.
+By now I am out of the whole UO scene and don't care anymore. I hope that
+someone finds the sources useful. I didn't modify anything, just updated the
+changes and added this file.
+
+If you have any further questions, feel free to contact me:
+
+ICQ: 59280495
+Jabber: folke@amessage.eu
+Mail: folko@elitecoder.net
+
+Regards,
+
+Folke 'Folko' Will
+
+June 2007
